@@ -1,0 +1,26 @@
+{
+  "name": "redsys-api",
+  "version": "0.0.1",
+  "description": "A module for the online Redsys payment system",
+  "main": "redsys_api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tchar/redsys-api-js.git"
+  },
+  "keywords": [
+    "redsys",
+    "pos",
+    "online payment",
+    "payment"
+  ],
+  "author": "Tilemachos Charalampous",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tchar/redsys-api-js/issues"
+  },
+  "homepage": "https://github.com/tchar/redsys-api-js#readme",
+  "dependencies": {}
+}
