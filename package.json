@@ -1,6 +1,6 @@
 {
   "name": "redsys-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A module for the online Redsys payment system",
   "main": "redsys_api.js",
   "scripts": {
