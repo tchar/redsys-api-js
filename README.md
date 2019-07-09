@@ -25,14 +25,6 @@ var key = 'sq7HjrUOBfKmC576ILgskD5srU870gJ7';
 var params = redsys.createMerchantParameters();
 var signature = redsys.createMerchantSignature(key);
 
-String.prototype.format = function () {
-  var i = 0, args = arguments;
-  return this.replace(/{\d+}/g, function (elem) {
-  	var replacement = args[elem.replace('{', '').replace('}', '')];
-  	return (typeof replacement === 'undefined') ? '' : replacement;
-  });
-};
-
 return `
 		<!DOCTYPE html>
 		<html>
@@ -47,16 +39,16 @@ return `
 		        	<input type="text" name="Ds_SignatureVersion" value="HMAC_SHA256_V1" />
 		    	</div>
 		    	<div>
-		        	<input type="text" name="Ds_MerchantParameters" value="{0}" />
+		        	<input type="text" name="Ds_MerchantParameters" value="${params}" />
 		        </div>
 		        <div>
-		        	<input type="text" name="Ds_Signature" value="{1}" />
+		        	<input type="text" name="Ds_Signature" value="${signature}" />
 		        </div>
 		        <input type="submit" value="Submit" />
 		    </form>
 		</body>
 
-		</html>`.format(params, signature);
+		</html>`;
 ```
 
 ## Verify signature

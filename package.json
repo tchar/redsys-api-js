@@ -2,7 +2,7 @@
   "name": "redsys-api",
   "version": "0.0.2",
   "description": "A module for the online Redsys payment system",
-  "main": "redsys_api.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
