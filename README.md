@@ -1,8 +1,14 @@
-# redsys-api-js
+# Redsys-api-js
 
-# How to use
+....
 
-## Create payment form
+## Installation 
+
+.....
+
+## Usage
+
+### Create payment form
 ```javascript
 const RedsysAPI = require('redsys-api');
 
@@ -51,7 +57,7 @@ return `
 		</html>`;
 ```
 
-## Verify signature
+### Verify signature
 ```javascript
 // let data be the data from the notification request. then
 const RedsysAPI = require('redsys-api');
@@ -67,7 +73,23 @@ if (redsys.checkMerchantSignatureNotif(key, encoded, signature)){
   // do something else
 }
 ```
-Note that there is also a method `redsys.createMerchantSignatureNotif(key, encoded)` available that returns base64 signature
-to compare with the original, however due to some base64 differencies it is recommended to use the 
-`redsys.checkMerchantSignatureNotif(key, encoded, signature)` method. However if you want to use it, make sure to convert
-the original signature as `Buffer.from(signature, 'base64').toString('base64');
+
+### Notes on createMerchantSignatureNotif(key, encoded,)
+
+createMerchantSignatureNotif() is an overloaded method with two declarations. The following declaration, which takes 
+a signature as an argument, is recommended:
+```javascript
+redsys.checkMerchantSignatureNotif(key, encoded, signature)
+``` 
+The method returns a base64 signature to be compared with the original signature. When the other declaration is used, 
+the original signature should be converted to base64 as well.   
+
+```javascript
+Buffer.from(signature, 'base64').toString('base64'); // to convert the original signiture to base64
+
+redsys.createMerchantSignatureNotif(key, encoded); // the alternative declaration of the function
+```
+
+## License
+
+[MIT](LICENSE)
