@@ -1,10 +1,10 @@
 # Redsys-api-js
 
-....
+
 
 ## Installation 
 
-.....
+
 
 ## Usage
 
