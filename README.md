@@ -1,10 +1,12 @@
 # Redsys-api-js
 
-
+A module for the online Redsys payment system. 
 
 ## Installation 
 
-
+```
+$ npm install redsys-api
+```
 
 ## Usage
 
@@ -74,10 +76,10 @@ if (redsys.checkMerchantSignatureNotif(key, encoded, signature)){
 }
 ```
 
-### Notes on createMerchantSignatureNotif(key, encoded,)
+### Notes on createMerchantSignatureNotif(key, encoded, __ )
 
 createMerchantSignatureNotif() is an overloaded method with two declarations. The following declaration, which takes 
-a signature as an argument, is recommended:
+a Signature as an argument, is recommended:
 ```javascript
 redsys.checkMerchantSignatureNotif(key, encoded, signature)
 ``` 
